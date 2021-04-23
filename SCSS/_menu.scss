@@ -1,0 +1,83 @@
+body{
+    height: 100%;
+}
+
+.navigation{
+    max-width: 90%;
+    margin: 3em auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    .logo{
+        font-size: 3em;
+    }
+    .navList li{
+        display: inline;
+        font-size: 2em;   
+    }
+}
+
+.navList li:nth-child(2){
+    margin: 0 2em;
+}
+
+.navList li a{
+    color:black;
+}
+
+// haburger styles
+
+.hamburger{
+    display: none;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.line1, .line2, .line3{
+    height: .5em;
+    width: 3em;
+    background: black;
+    border-radius: 2em;
+}
+
+.line2{
+    margin: .5em 0;
+}
+
+@media (max-width: 37.5rem){  
+
+    .navigation{
+        margin: 1em auto 0 auto;
+        flex-direction: column;
+
+        .logo{
+            margin-right: auto;
+        }
+    }
+
+.navList {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(230, 230, 250, .2);
+    margin-left: 80em;
+    transition: 600ms ease-in-out;
+}
+
+.navList.active{
+    margin-left: 0em;
+}
+
+.navList li:nth-child(2){
+    margin: 1em 0;
+}
+.hamburger{
+    display: block;
+}
+}
+
